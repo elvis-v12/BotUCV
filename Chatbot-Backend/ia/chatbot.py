@@ -9,7 +9,6 @@ from fuzzywuzzy import process
 
 nlp = spacy.load("es_core_news_sm")
 
-
 words_patterns = pickle.load(open("data/words_patterns.pkl", "rb"))
 classes_classes = pickle.load(open("data/classes_classes.pkl", "rb"))
 model = load_model("data/chatbot_model.keras")
