@@ -19,41 +19,36 @@ public class AdminController {
 
     private final AdminService adminService;
 
-
     @PostMapping()
     public ResponseEntity<Admin> saveAdmin(@RequestBody Admin dto) {
-        Admin v_admin = v_adminService
-        .saveAdmin(dto);
+        Admin v_admin = adminService.saveAdmin(dto);
         return new ResponseEntity<>(v_admin, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Admin> getAdminById(@PathVariable("id") UUID id) {
-        Admin v_admin = v_adminService
-        .getAdminById(id);
+        Admin v_admin = adminService.getAdminById(id);
         return new ResponseEntity<>(v_admin, HttpStatus.OK);
     }
 
     @GetMapping()
     public ResponseEntity<List<Admin>> getAllAdmins() {
-        List<Admin> admins = v_adminService
-        .getAll();
+        List<Admin> admins = adminService.getAll();
         return new ResponseEntity<>(admins, HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
     private ResponseEntity<Admin> update(@PathVariable("id") UUID id, @RequestBody Admin dto) throws Exception {
         dto.setId(id);
-        Admin v_admin = v_adminService
-        .updateAdmin(dto, id);
+        Admin v_admin = adminService.updateAdmin(dto, id);
         return new ResponseEntity<>(v_admin, HttpStatus.OK);
     }
 
     @PostMapping("/login")
     public ResponseEntity<Admin> login(@RequestBody Admin dto) throws Exception {
-        Optional<Admin> v_admin = v_adminService
-        .login(dto.getUserName(), dto.getPassword());
-        return v_admin.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.UNAUTHORIZED));
+        Optional<Admin> v_admin = adminService.login(dto.getUserName(), dto.getPassword());
+        return v_admin.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+                      .orElseGet(() -> new ResponseEntity<>(HttpStatus.UNAUTHORIZED));
     }
 
     @PostMapping("/reset-password")

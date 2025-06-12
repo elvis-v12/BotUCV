@@ -26,13 +26,13 @@ public class MessageService {
         message.setChat(chat);
 
         if (dto.getAlternatives() != null && dto.getAnswer() != null && dto.getAnswered() != null) {
-            dto.getAlternatives().forEach(alternative -> alternative.setMessage(message));
+            dto.getAlternatives().forEach(alternative -> alternative.setV_message(message));
             message.setAlternatives(dto.getAlternatives());
             message.setAnswer(dto.getAnswer());
             message.setAnswered(dto.getAnswered());
         }
 
-        chat.getMessages().add(message);
+        chat.getV_messages().add(message);
 //        v_chatService.saveChat(chat);
 
         return v_messageRepository.save(message);

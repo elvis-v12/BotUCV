@@ -13,29 +13,30 @@ public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long v_id;
+    @Column(name = "v_id")
+    private Long id;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
-    private String v_statement;
+    @Column(name = "v_statement", columnDefinition = "TEXT", nullable = false)
+    private String statement;
 
-    @Column(nullable = false, length = 10)
-    private String v_role;
+    @Column(name = "v_role", nullable = false, length = 10)
+    private String role;
 
-    @Column(nullable = false)
-    private Long v_unixTime;
+    @Column(name = "v_unixTime", nullable = false)
+    private Long unixTime;
 
     @OneToMany(mappedBy = "message", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
-    private List<Alternative> v_alternatives;
+    private List<Alternative> alternatives;
 
-    @Column(nullable = true)
-    private Integer v_answer;
+    @Column(name = "v_answer", nullable = true)
+    private Integer answer;
 
-    @Column(nullable = true)
-    private Boolean v_answered;
+    @Column(name = "v_answered", nullable = true)
+    private Boolean answered;
 
     @ManyToOne
     @JoinColumn(name = "chat_id", nullable = false, foreignKey = @ForeignKey(name = "FK_Message_Chat"))
     @JsonBackReference
-    private Chat v_chat;
+    private Chat chat;
 }

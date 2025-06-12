@@ -37,7 +37,7 @@ public class StudentController {
 
     @PutMapping("/{userUID}")
     private ResponseEntity<Student> update(@PathVariable("userUID") String userUID, @RequestBody Student dto) throws Exception {
-        dto.setUserUID(userUID);
+       dto.setV_userUID(userUID);
         Student v_student = v_studentService.updateStudent(dto, userUID);
         return new ResponseEntity<>(v_student, HttpStatus.OK);
     }

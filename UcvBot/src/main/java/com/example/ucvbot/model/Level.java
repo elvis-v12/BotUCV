@@ -9,9 +9,9 @@ public class Level {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long v_id;
+    @Column(name = "v_id")
+    private Long id;
 
-    // Básico, Intermedio, Avanzado
-    @Column(nullable = false, unique = true, length = 50)
-    private String v_name;
+    @Column(name = "v_name", nullable = false, unique = true, length = 50)
+    private String name;
 }

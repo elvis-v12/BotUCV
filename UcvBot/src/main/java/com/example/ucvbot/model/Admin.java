@@ -12,15 +12,15 @@ public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID v_id;
+    private UUID id;
 
-    @Column(nullable = false, unique = true, length = 20)
-    private String v_userName;
+    @Column(name = "v_userName", nullable = false, unique = true, length = 20)
+    private String userName;
 
     @Check(constraints = "password LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'", name = "CK_Password_Admin")
-    @Column(nullable = false, length = 8)
-    private String v_password;
+    @Column(name = "v_password", nullable = false, length = 8)
+    private String password;
 
-    @Column(nullable = false, unique = true, length = 100)
-    private String v_email;
+    @Column(name = "v_email", nullable = false, unique = true, length = 100)
+    private String email;
 }
