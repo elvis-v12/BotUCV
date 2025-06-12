@@ -1,0 +1,149 @@
+{
+  "tag": "exercise_java_basics_randomized",
+  "patterns": [
+    "Dame cualquier ejercicio para practicar",
+    "Quiero practicar alguna actividad o ejercicio",
+    "Ejercicio de fundamentos aleatorios en Java",
+    "Actividad para practicar Java",
+    "¿Tienes ejercicios básicos en Java con bucles y condiciones?",
+    "Necesito practicar bucles y condiciones en Java.",
+    "Ejercicio práctico de fundamentos en Java de cualquier tema.",
+    "Me gustaría poder practicar con algún ejercicio cualquiera",
+    "¿Algún ejercicio básico de Java con bucles y condiciones?",
+    "Ahora quisiera algún ejercicio básico para practicar"
+  ],
+  "responses": [
+    {
+      "statement": "Escribe un programa en Java que imprima los números del 1 al 10 usando un bucle for.",
+      "alternatives": [
+        {
+          "content": "for(int i = 1; i <= 10; i++) {\n    System.out.println(i);\n}",
+          "numberIndex": 0
+        },
+        {
+          "content": "while(int i = 1; i <= 10; i++) {\n    System.out.println(i);\n}",
+          "numberIndex": 1
+        },
+        {
+          "content": "do {\n    System.out.println(i);\n    i++;\n} while(int i = 1; i <= 10);",
+          "numberIndex": 2
+        },
+        {
+          "content": "if(int i = 1; i <= 10; i++) {\n    System.out.println(i);\n}",
+          "numberIndex": 3
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "statement": "Desarrolla un programa en Java que imprima los números pares del 1 al 20 usando un bucle while.",
+      "alternatives": [
+        {
+          "content": "int i = 1;\nwhile(i <= 20) {\n    if(i % 2 == 0) {\n        System.out.println(i);\n    }\n    i++;\n}",
+          "numberIndex": 0
+        },
+        {
+          "content": "int i = 1;\nfor(i <= 20) {\n    if(i % 2 == 0) {\n        System.out.println(i);\n    }\n    i++;\n}",
+          "numberIndex": 1
+        },
+        {
+          "content": "int i = 1;\ndo {\n    if(i % 2 == 0) {\n        System.out.println(i);\n    }\n    i++;\n} while(i <= 20);",
+          "numberIndex": 2
+        },
+        {
+          "content": "int i = 1;\nwhile(i <= 20) {\n    if(i % 2 == 1) {\n        System.out.println(i);\n    }\n    i++;\n}",
+          "numberIndex": 3
+        }
+      ],
+      "answer": 1
+    },
+    {
+      "statement": "Crea un programa en Java que imprima los primeros 5 números usando un bucle do-while.",
+      "alternatives": [
+        {
+          "content": "int i = 1;\ndo {\n    System.out.println(i);\n    i++;\n} while(i <= 5);",
+          "numberIndex": 0
+        },
+        {
+          "content": "int i = 1;\nwhile(i <= 5) {\n    System.out.println(i);\n    i++;\n}",
+          "numberIndex": 1
+        },
+        {
+          "content": "for(int i = 1; i <= 5; i++) {\n    System.out.println(i);\n}",
+          "numberIndex": 2
+        },
+        {
+          "content": "int i = 1;\ndo {\n    System.out.println(i);\n    i--;\n} while(i >= 1);",
+          "numberIndex": 3
+        }
+      ],
+      "answer": 2
+    },
+    {
+      "statement": "Desarrolla un programa en Java que busque un número en un array usando un algoritmo de búsqueda lineal.",
+      "alternatives": [
+        {
+          "content": "int[] arr = {1, 2, 3, 4, 5};\nint key = 3;\nboolean found = false;\nfor(int i = 0; i < arr.length; i++) {\n    if(arr[i] == key) {\n        found = true;\n        break;\n    }\n}\nif(found) {\n    System.out.println(\"Número encontrado\");\n} else {\n    System.out.println(\"Número no encontrado\");\n}",
+          "numberIndex": 0
+        },
+        {
+          "content": "int[] arr = {1, 2, 3, 4, 5};\nint key = 3;\nboolean found = true;\nfor(int i = 0; i < arr.length; i++) {\n    if(arr[i] == key) {\n        found = false;\n        break;\n    }\n}\nif(found) {\n    System.out.println(\"Número encontrado\");\n} else {\n    System.out.println(\"Número no encontrado\");\n}",
+          "numberIndex": 1
+        },
+        {
+          "content": "int[] arr = {1, 2, 3, 4, 5};\nint key = 6;\nboolean found = false;\nfor(int i = 0; i < arr.length; i++) {\n    if(arr[i] == key) {\n        found = true;\n        break;\n    }\n}\nif(found) {\n    System.out.println(\"Número encontrado\");\n} else {\n    System.out.println(\"Número no encontrado\");\n}",
+          "numberIndex": 2
+        },
+        {
+          "content": "int[] arr = {1, 2, 3, 4, 5};\nint key = 3;\nboolean found = false;\nfor(int i = 0; i < arr.length; i++) {\n    if(arr[i] != key) {\n        found = true;\n        break;\n    }\n}\nif(found) {\n    System.out.println(\"Número encontrado\");\n} else {\n    System.out.println(\"Número no encontrado\");\n}",
+          "numberIndex": 3
+        }
+      ],
+      "answer": 3
+    },
+    {
+      "statement": "Crea un programa en Java que determine si un número es positivo, negativo o cero usando una estructura if.",
+      "alternatives": [
+        {
+          "content": "int num = 10;\nif(num > 0) {\n    System.out.println(\"Positivo\");\n} else if(num < 0) {\n    System.out.println(\"Negativo\");\n} else {\n    System.out.println(\"Cero\");\n}",
+          "numberIndex": 0
+        },
+        {
+          "content": "int num = -5;\nif(num > 0) {\n    System.out.println(\"Negativo\");\n} else if(num < 0) {\n    System.out.println(\"Positivo\");\n} else {\n    System.out.println(\"Cero\");\n}",
+          "numberIndex": 1
+        },
+        {
+          "content": "int num = 0;\nif(num > 0) {\n    System.out.println(\"Cero\");\n} else if(num < 0) {\n    System.out.println(\"Negativo\");\n} else {\n    System.out.println(\"Positivo\");\n}",
+          "numberIndex": 2
+        },
+        {
+          "content": "int num = 10;\nif(num > 0) {\n    System.out.println(\"Cero\");\n} else if(num < 0) {\n    System.out.println(\"Positivo\");\n} else {\n    System.out.println(\"Negativo\");\n}",
+          "numberIndex": 3
+        }
+      ],
+      "answer": 0
+    },
+    {
+      "statement": "Escribe un programa en Java que use una estructura switch para imprimir el nombre del día de la semana dado un número del 1 al 7.",
+      "alternatives": [
+        {
+          "content": "int day = 3;\nswitch(day) {\n    case 1:\n        System.out.println(\"Lunes\");\n        break;\n    case 2:\n        System.out.println(\"Martes\");\n        break;\n    case 3:\n        System.out.println(\"Miércoles\");\n        break;\n    case 4:\n        System.out.println(\"Jueves\");\n        break;\n    case 5:\n        System.out.println(\"Viernes\");\n        break;\n    case 6:\n        System.out.println(\"Sábado\");\n        break;\n    case 7:\n        System.out.println(\"Domingo\");\n        break;\n    default:\n        System.out.println(\"Día inválido\");\n}",
+          "numberIndex": 0
+        },
+        {
+          "content": "int day = 3;\nswitch(day) {\n    case 1:\n        System.out.println(\"Domingo\");\n        break;\n    case 2:\n        System.out.println(\"Lunes\");\n        break;\n    case 3:\n        System.out.println(\"Martes\");\n        break;\n    case 4:\n        System.out.println(\"Miércoles\");\n        break;\n    case 5:\n        System.out.println(\"Jueves\");\n        break;\n    case 6:\n        System.out.println(\"Viernes\");\n        break;\n    case 7:\n        System.out.println(\"Sábado\");\n        break;\n    default:\n        System.out.println(\"Día inválido\");\n}",
+          "numberIndex": 1
+        },
+        {
+          "content": "int day = 3;\nswitch(day) {\n    case 1:\n        System.out.println(\"Lunes\");\n    case 2:\n        System.out.println(\"Martes\");\n    case 3:\n        System.out.println(\"Miércoles\");\n    case 4:\n        System.out.println(\"Jueves\");\n    case 5:\n        System.out.println(\"Viernes\");\n    case 6:\n        System.out.println(\"Sábado\");\n    case 7:\n        System.out.println(\"Domingo\");\n    default:\n        System.out.println(\"Día inválido\");\n}",
+          "numberIndex": 2
+        },
+        {
+          "content": "int day = 3;\nswitch(day) {\n    case 1:\n        System.out.println(\"Lunes\");\n        break;\n    case 2:\n        System.out.println(\"Martes\");\n        break;\n    case 3:\n        System.out.println(\"Miércoles\");\n        break;\n    case 4:\n        System.out.println(\"Jueves\");\n        break;\n    case 5:\n        System.out.println(\"Viernes\");\n        break;\n    case 6:\n        System.out.println(\"Sábado\");\n        break;\n    case 7:\n        System.out.println(\"Domingo\");\n        break;\n}",
+          "numberIndex": 3
+        }
+      ],
+      "answer": 1
+    }
+  ]
+}

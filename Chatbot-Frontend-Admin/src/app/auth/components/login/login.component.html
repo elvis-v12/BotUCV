@@ -1,0 +1,74 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="login-header">
+      <img
+        src="../../../../assets/images/logos/UcvBot-Saludando.png"
+        alt="Trilce UCV"
+        class="logo"
+      />
+      <h2>UCV//BOT</h2>
+    </div>
+    <div class="login-form">
+      <div class="form-group">
+        <label for="username">Ingrese su Usuario</label>
+        <input
+          type="text"
+          id="userName"
+          [(ngModel)]="userName"
+          name="userName"
+          required
+          placeholder="Ingrese su Usuario"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Ingrese su Contraseña</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Ingrese su contraseña"
+        />
+      </div>
+      <button class="login-button" (click)="ingresar()">Ingresar</button>
+      <a routerLink="/reset-password" class="forgot-password"
+        >¿Olvidaste tu contraseña?</a
+      >
+    </div>
+  </div>
+  <div class="virtual-keyboard">
+    <!-- Teclado virtual -->
+    <h3>TECLADO VIRTUAL</h3>
+    <p>Clave de 8 dígitos</p>
+    <!-- Implementa tu teclado virtual aquí -->
+    <div class="circles-container">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="keyboard">
+      <div class="keyboard-row">
+        <button (click)="addCharacter('5')">5</button>
+        <button (click)="addCharacter('8')">8</button>
+        <button (click)="addCharacter('2')">2</button>
+        <button (click)="addCharacter('3')">3</button>
+        <button (click)="addCharacter('4')">4</button>
+      </div>
+      <div class="keyboard-row">
+        <button (click)="addCharacter('6')">6</button>
+        <button (click)="addCharacter('7')">7</button>
+        <button (click)="addCharacter('0')">0</button>
+        <button (click)="addCharacter('9')">9</button>
+        <button (click)="addCharacter('1')">1</button>
+      </div>
+      <div class="keyboard-row">
+        <button class="action-button" (click)="clearInput()">✖</button>
+        <button class="action-button" (click)="deleteCharacter()">⌫</button>
+      </div>
+    </div>
+  </div>
+</div>

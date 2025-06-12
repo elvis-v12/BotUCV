@@ -1,0 +1,22 @@
+<div id="dashboard-content">
+  <app-top-cards [topCards]="topCards"></app-top-cards>
+  <div class="row">
+    <div class="col-lg-7">
+      <app-sales-summary [salesSummary]="salesSummary"></app-sales-summary>
+    </div>
+    <div class="col-lg-5">
+      <app-feeds [feeds]="feeds"></app-feeds>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <app-top-selling [topSelling]="topSelling"></app-top-selling>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-4">
+  <button class="btn btn-danger btn-lg mr-4" (click)="generatePDF()">
+    <i class="fas fa-file-pdf"></i> Generar reporte de PDF
+  </button>
+</div>

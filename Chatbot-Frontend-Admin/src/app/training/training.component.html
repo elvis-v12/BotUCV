@@ -1,0 +1,58 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Entrenamiento</h4>
+    <h5 class="card-subtitle text-muted">Entrenamiento del CHAT BOT.</h5>
+    <div class="container">
+      <h2>Registro y Entrenamiento</h2>
+      <h6 class="card-subtitle text-muted">
+        Para enviar ejercicios Agregar (Etiqueta: "exercise_tema_central")
+      </h6>
+      <form action="/submit" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="trainingFile">Adjuntar Archivo JSON:</label>
+          <input
+            type="file"
+            id="trainingFile"
+            (change)="onFileSelected($event)"
+            accept=".json"
+            name="documents"
+            multiple
+            rows="2"
+          />
+        </div>
+        <div class="form-group">
+          <label for="trainingContent">VISUALIZAR:</label>
+          <div class="pattern-response-container">
+            <div class="pattern-response-group">
+              <textarea
+                id="trainingContent"
+                [(ngModel)]="trainingContent"
+                name="trainingContent"
+                rows="10"
+                cols="50"
+                readonly
+                rows="2"
+                required
+                placeholder="CONTENIDO"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            (click)="trainModel()"
+            [disabled]="!trainingContent"
+            [ngClass]="{ 'btn btn-secondary': !trainingStatusMessage }"
+          >
+            ENTRENAR
+          </button>
+        </div>
+        <div *ngIf="trainingStatusMessage" class="status-message">
+          {{ trainingStatusMessage }}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
