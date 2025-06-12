@@ -41,14 +41,7 @@
     <p>Clave de 8 dígitos</p>
     <!-- Implementa tu teclado virtual aquí -->
     <div class="circles-container">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" *ngFor="let _ of [].constructor(8); let i = index" [class.filled]="password.length > i"></div>
     </div>
     <div class="keyboard">
       <div class="keyboard-row">

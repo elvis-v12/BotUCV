@@ -40,9 +40,17 @@ export class LoginComponent {
     );
   }
 
-  addCharacter(character: string) {}
+  addCharacter(character: string) {
+    if (this.password.length < 8) {
+      this.password += character;
+    }
+  }
 
-  clearInput() {}
+  clearInput() {
+    this.password = '';
+  }
 
-  deleteCharacter() {}
+  deleteCharacter() {
+    this.password = this.password.slice(0, -1);
+  }
 }

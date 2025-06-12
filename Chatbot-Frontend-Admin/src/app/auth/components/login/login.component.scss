@@ -98,6 +98,11 @@ body, html {
   margin: 0 5px;
   background-color: #ccc;
   border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &.filled {
+    background-color: #002f6c;
+  }
 }
 
 /* Keyboard */
