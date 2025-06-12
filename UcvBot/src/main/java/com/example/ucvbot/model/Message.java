@@ -25,7 +25,7 @@ public class Message {
     @Column(name = "v_unixTime", nullable = false)
     private Long unixTime;
 
-    @OneToMany(mappedBy = "message", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "v_message", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonManagedReference
     private List<Alternative> alternatives;
 
