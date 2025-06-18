@@ -6,7 +6,7 @@
       Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Helvetica,
       Apple Color Emoji, Arial, Segoe UI Emoji, Segoe UI Symbol;
   padding: 34px 20px;
-  background-color: #243659;
+  background-color: #ae0505;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -68,7 +68,7 @@ li {
 
 .new-chat:hover,
 li:hover {
-  background-color: #3a568e;
+  background-color: #5656b0;
   cursor: pointer;
 }
 
@@ -99,7 +99,7 @@ li a {
   background: linear-gradient(
     to right,
     transparent,
-    #243659
+    #22355d
   ); /* Efecto de desvanecido */
   pointer-events: none; /* Permite hacer clic a través del div */
 }
@@ -109,5 +109,5 @@ li.overflowing .fade-right {
 }
 
 li:hover .fade-right {
-  background: linear-gradient(90deg, transparent, #3a568e);
+  background: linear-gradient(90deg, transparent, #304a7e);
 }
